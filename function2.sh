@@ -7,8 +7,12 @@ function backup_file () {
     cp $1 $BACK
   fi
 }
-backup_file /etc/hosts
+backup_file /etc/hosts11
+echo $?
 if [ $? -eq 0 ]
 then 
   echo "Backup succeeded!"
+else
+  echo "Backup failed!"
+  exit 1
 fi
